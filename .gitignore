@@ -1,24 +1,17 @@
-# Project specific #
-####################
-config.json
-certificates
+# OS auto-generated files
+*~
+*.DS_Store
 
-# Node specific #
-#################
-npm-debug.log
-node_modules
+# Node
+node_modules/
 
-# IDE Specific #
-################
-.idea
+# IDE files
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-Thumbs.db
+# Project specific
+*config.json
+!example.config.json
+certificates/*
+!certificates/.gitkeep
