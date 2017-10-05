@@ -1,0 +1,28 @@
+version: "2"
+
+services:
+
+  mongodb-server:
+    image: mongo:3.4
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - api-network
+
+  node-server:
+    build: ./
+    ports:
+      - 3000:8000
+    networks:
+      - api-network
+    depends_on:
+      - mongodb-server
+
+networks:
+  api-network:
+
+volumes:
+  mongodb-data:

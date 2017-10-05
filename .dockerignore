@@ -1,0 +1,23 @@
+# OS auto-generated files
+*~
+*.DS_Store
+
+# IDE files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Other
+HISTORY.md
+README.md
