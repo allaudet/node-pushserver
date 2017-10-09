@@ -36,9 +36,14 @@ If you checked out this project from github, you can find a configuration file e
 
 ```js
 {
-	"webPort": 8000,
+    "webPort": 8000,
 
-    "mongodbUrl": "mongodb://username:password@localhost/database",
+    "auth": {
+        "user":"user",
+        "password": "password"
+    },
+
+    "mongodbUrl": "mongodb://db_username:db_password@localhost:27017/database_name",
 
     "gcm": {
         "apiKey": "YOUR_API_KEY_HERE"
