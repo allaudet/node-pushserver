@@ -1,6 +1,6 @@
 # Push Server
 
-Push Server is a cross-plateform push server based on [node-apn](https://github.com/argon/node-apn) and [node-gcm](https://github.com/ToothlessGear/node-gcm). Push Server currently supports iOS (APN) and android (GCM) platforms. It uses mongoDB to store the push tokens. 
+Push Server is a cross-plateform push server based on [node-apn](https://github.com/argon/node-apn) and [node-gcm](https://github.com/ToothlessGear/node-gcm). Push Server currently supports iOS (APN) and android (GCM) platforms. It uses mongoDB to store the push tokens.
 Note that this server is not meant to be used as a front facing server as there's no particular security implemented.
 
 [![NPM](https://nodei.co/npm/node-pushserver.png?downloads=true&stars=true)](https://nodei.co/npm/node-pushserver/)
@@ -66,11 +66,11 @@ If you checked out this project from github, you can find a configuration file e
 
 +  Read [Apple's Notification guide](https://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Introduction.html) to know how to get your certificates for APN.
 
-+ Please refer to node-apn's [documentation](https://github.com/argon/node-apn) to see all the available parameters and find how to convert your certificates into the expected format. 
++ Please refer to node-apn's [documentation](https://github.com/argon/node-apn) to see all the available parameters and find how to convert your certificates into the expected format.
 
 #### Dynamic configuration
 
-You can use the "process.env.MY_ENV_VAR" syntax in the config.json file. It will automatically be replaced by the value of the corresponding environment variable. 
+You can use the "process.env.MY_ENV_VAR" syntax in the config.json file. It will automatically be replaced by the value of the corresponding environment variable.
 
 ### 4 - Start server
 
@@ -110,7 +110,7 @@ You can easily send push messages using the web interface available at `http://d
 http://domain:port/send (POST)
 ```
 + The content-type must be 'application/json'.
-+ Format : 
++ Format :
 
 ```json
 {
@@ -130,14 +130,14 @@ http://domain:port/send (POST)
 ```
 
 + "users" is optionnal, but must be an array if set. If not defined, the push message will be sent to every user (filtered by target).
-+ You can send push messages to Android or iOS devices, or both, by using the "android" and "ios" fields with appropriate options. See GCM and APN documentation to find the available options. 
++ You can send push messages to Android or iOS devices, or both, by using the "android" and "ios" fields with appropriate options. See GCM and APN documentation to find the available options.
 
 #### Send push notifications
 ```
 http://domain:port/sendBatch (POST)
 ```
 + The content-type must be 'application/json'.
-+ Format : 
++ Format :
 
 ```json
 {
@@ -209,7 +209,7 @@ or
 ```
 http://domain:port/users (GET)
 ```
-+ Response format: 
++ Response format:
 ```js
 {
     "users": [
