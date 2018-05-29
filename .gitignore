@@ -1,6 +1,10 @@
 # OS auto-generated files
-*~
 *.DS_Store
+
+# Vim
+*~
+*.swp
+*.swo
 
 # Node
 node_modules/

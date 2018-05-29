@@ -1,6 +1,10 @@
 # OS auto-generated files
-*~
-*.DS_Store
+**/*.DS_Store
+
+# Vim
+**/*~
+**/*.swp
+**/*.swo
 
 # IDE files
 .idea/

@@ -18,10 +18,10 @@ var config = require('../lib/Config'),
 
 function collect(val, memo) {
     var m = /^[^=]+=[^=]+$/.exec(val);
-    if(!m) {
+    if (!m) {
         console.log('Incorrect value "' + val + '": override option should be of the form key=value or key.subKey=value. If the value begins with process.env, it is evaluated.');
     } else {
-      memo.push(val);
+        memo.push(val);
     }
     return memo;
 }
@@ -44,17 +44,17 @@ if (configPath) {
 }
 
 var overrideValues = {};
-_.forEach(program.override, function(valueParam){
+_.forEach(program.override, function (valueParam) {
     var array = valueParam.split('=');
     var key = array[0];
     var value = array[1];
 
     var configElement = overrideValues;
     var keys = key.split('.');
-    for(var i = 0 ; i < keys.length - 1 ; i++) {
-      var k = keys[i];
-      configElement[k] = configElement[k] || {};
-      configElement = configElement[k];
+    for (var i = 0; i < keys.length - 1; i++) {
+        var k = keys[i];
+        configElement[k] = configElement[k] || {};
+        configElement = configElement[k];
     }
     var k = keys[keys.length - 1];
     configElement[k] = value;
