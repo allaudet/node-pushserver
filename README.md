@@ -63,6 +63,10 @@ If you checked out this project from github, you can find a configuration file e
             "batchFeedback": true
         }
     }
+
+    "sentry": {
+        "dsn": "https://________________________________@sentry.io/_______"
+    }
 }
 
 ```

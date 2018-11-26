@@ -18,5 +18,8 @@ npm-debug.log
 # Project specific
 *config.json
 !example.config.json
-certificates/*
-!certificates/.gitkeep
+
+# Certificates
+!/certificates
+/certificates/*
+!/certificates/.gitkeep

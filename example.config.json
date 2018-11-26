@@ -25,5 +25,9 @@
             "interval": 43200,
             "batchFeedback": true
         }
+    },
+
+    "sentry": {
+        "dsn": ""
     }
 }
